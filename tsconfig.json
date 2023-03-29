@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES2016",
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"outDir": "dist",
+		"noImplicitAny": true,
+		"declaration": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}

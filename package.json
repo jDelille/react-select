@@ -1,0 +1,26 @@
+{
+  "name": "@jdeli/react-select",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/components/Select.css"
+  ],
+  "scripts": {
+    "build": "tsc && cp src/components/Select.css dist/components/Select.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.31"
+  }
+}
