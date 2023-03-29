@@ -16,7 +16,7 @@ import { SelectOption } from '@/../jd-react-select/dist/components/Select'
 
 Now, you can use it:
 
-#### Single Select
+#### Single Select (when you just want to select one value at a time)
 
 ```jsx
 <Select
@@ -26,7 +26,7 @@ Now, you can use it:
 />
 ```
 
-#### Multi Select
+#### Multi Select (when you want to select multiple elements)
 
 ```jsx
 <Select
@@ -37,7 +37,7 @@ Now, you can use it:
 />
 ```
 
-### Props
+## Props
 
 #### `options: {Array}`
 
@@ -59,11 +59,25 @@ you are using an array of objects, ensure you have a `label` key. e.g
 
 **Description:** Specifies the if the select component can have multiple values selected at once.
 
+## 🖌️ Add custom styles
+
+You can fully customize the styles for the select component by targeting the class names in your stylesheet.
+
+```
+.container
+// Overwrite the select container 
+```
+
+To view all the class names, inspect the select component in your DevTools!
+
+
 
 ## 👀 Examples
 
 ⚡️
 <a href="https://codesandbox.io/s/jd-react-select-v8fkfe?file=/src/App.tsx">jd-react-select on CodeSandbox</a>
+
+
 
 
 
