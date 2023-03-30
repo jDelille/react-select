@@ -3,6 +3,7 @@ import { FC, useEffect, useRef, useState } from 'react';
 export type SelectOption = {
  label: string;
  value: string | number;
+ id?: string | number;
 };
 
 type MultipleSelectProps = {

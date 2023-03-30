@@ -1,7 +1,8 @@
 {
   "name": "jd-react-select",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.5",
+  "description": "Customizable select component for React made with TypeScript.",
+  "repository": "https://github.com/jDelille/react-select",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,14 +13,25 @@
     "build": "tsc && cp src/components/Select.css dist/components/Select.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Justin Delille",
+    "email": "dev.jdelille@gmail.com",
+    "url": "https://github.com/jDelille"
+  },
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "typescript": "^5.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.31"
-  }
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "select",
+    "react-select",
+    "typescript",
+    "ui"
+  ]
 }
