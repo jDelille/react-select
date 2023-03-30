@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Select = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
-const Select = ({ multiple, value, onChange, options, className }) => {
+require("./Select.css");
+const Select = ({ multiple, value, onChange, options, avatars, className }) => {
     const [isOpen, setIsOpen] = (0, react_1.useState)(false);
     const [highlightedIndex, setHighlightedIndex] = (0, react_1.useState)(0);
     const containerRef = (0, react_1.useRef)(null);
@@ -71,16 +72,18 @@ const Select = ({ multiple, value, onChange, options, className }) => {
                     ? value.map((v) => ((0, jsx_runtime_1.jsxs)("button", Object.assign({ onClick: (e) => {
                             e.stopPropagation();
                             selectOption(v);
-                        }, className: "option-badge" }, { children: [v.label, (0, jsx_runtime_1.jsx)("span", Object.assign({ className: 'remove-btn' }, { children: "\u00D7" }))] }), v.value)))
+                        }, className: 'option-badge' }, { children: [v.label, (0, jsx_runtime_1.jsx)("span", Object.assign({ className: 'remove-btn' }, { children: "\u00D7" }))] }), v.id ? v.id : v.value)))
                     : value === null || value === void 0 ? void 0 : value.label })), (0, jsx_runtime_1.jsx)("button", Object.assign({ type: 'button', className: 'clear-btn', onClick: (e) => {
                     e.stopPropagation();
                     clearOptions();
-                } }, { children: "\u00D7" })), (0, jsx_runtime_1.jsx)("div", { className: 'divider' }), (0, jsx_runtime_1.jsx)("div", { className: 'caret' }), (0, jsx_runtime_1.jsx)("ul", Object.assign({ className: `options ${isOpen ? 'show' : ''}` }, { children: options.map((option, index) => ((0, jsx_runtime_1.jsx)("li", Object.assign({ onClick: (e) => {
+                } }, { children: "\u00D7" })), (0, jsx_runtime_1.jsx)("div", { className: 'divider' }), (0, jsx_runtime_1.jsx)("div", { className: 'caret' }), (0, jsx_runtime_1.jsx)("ul", Object.assign({ className: `options ${isOpen ? 'show' : ''}` }, { children: options.map((option, index) => ((0, jsx_runtime_1.jsxs)("li", Object.assign({ onClick: (e) => {
                         e.stopPropagation();
                         selectOption(option);
                         setIsOpen(false);
                     }, onMouseEnter: () => setHighlightedIndex(index), className: `option 
-     ${isOptionSelected(option) ? 'selected' : ''} ${index === highlightedIndex ? 'highlighted' : ''}` }, { children: option.label }), option.value))) }))] })));
+     ${isOptionSelected(option) ? 'selected' : ''} ${index === highlightedIndex ? 'highlighted' : ''}` }, { children: [avatars && option.avatar && ((0, jsx_runtime_1.jsx)("img", { src: option.avatar, alt: `${option.label} avatar`, className: "avatar", style: {
+                                width: '25px', height: '25px', borderRadius: '50%', marginRight: '10px'
+                            } })), option.label] }), option.value))) }))] })));
 };
 exports.Select = Select;
 //# sourceMappingURL=Select.js.map

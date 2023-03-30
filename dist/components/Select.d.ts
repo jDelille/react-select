@@ -1,15 +1,20 @@
 import { FC } from 'react';
+import './Select.css';
 export type SelectOption = {
     label: string;
     value: string | number;
+    id?: string | number;
+    avatar?: string;
 };
 type MultipleSelectProps = {
     multiple: true;
+    avatars?: boolean | undefined;
     value: SelectOption[];
     onChange: (value: SelectOption[]) => void;
 };
 type SingleSelectProps = {
     multiple?: false;
+    avatars?: boolean | undefined;
     value?: SelectOption;
     onChange: (value: SelectOption | undefined) => void;
 };

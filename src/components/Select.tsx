@@ -1,19 +1,23 @@
 import { FC, useEffect, useRef, useState } from 'react';
+import './Select.css';
 
 export type SelectOption = {
  label: string;
  value: string | number;
  id?: string | number;
+ avatar?: string;
 };
 
 type MultipleSelectProps = {
  multiple: true;
+ avatars?: boolean | undefined;
  value: SelectOption[];
  onChange: (value: SelectOption[]) => void;
 };
 
 type SingleSelectProps = {
  multiple?: false;
+ avatars?: boolean | undefined;
  value?: SelectOption;
  onChange: (value: SelectOption | undefined) => void;
 };
@@ -28,6 +32,7 @@ const Select: FC<SelectProps> = ({
  value,
  onChange,
  options,
+ avatars,
  className
 }) => {
  const [isOpen, setIsOpen] = useState(false);
@@ -107,12 +112,12 @@ const Select: FC<SelectProps> = ({
     {multiple
      ? value.map((v) => (
       <button
-       key={v.value}
+       key={v.id ? v.id : v.value}
        onClick={(e) => {
         e.stopPropagation();
         selectOption(v);
        }}
-       className="option-badge">
+       className='option-badge'>
        {v.label}
        <span className='remove-btn'>&times;</span>
       </button>
@@ -143,6 +148,11 @@ const Select: FC<SelectProps> = ({
       className={`option 
      ${isOptionSelected(option) ? 'selected' : ''} ${index === highlightedIndex ? 'highlighted' : ''
        }`}>
+      {avatars && option.avatar && (
+       <img src={option.avatar} alt={`${option.label} avatar`} className="avatar" style={{
+        width: '25px', height: '25px', borderRadius: '50%', marginRight: '10px'
+       }} />
+      )}
       {option.label}
      </li>
     ))}

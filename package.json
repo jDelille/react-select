@@ -1,6 +1,6 @@
 {
   "name": "jd-react-select",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Customizable select component for React made with TypeScript.",
   "repository": "https://github.com/jDelille/react-select",
   "main": "dist/index.js",
