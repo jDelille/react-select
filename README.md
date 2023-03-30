@@ -89,6 +89,29 @@ If you want to have a default value be selected when you component initializes, 
 
 To let the component know you want to have multiple selected values, pass in the multiple parameter.
 
+## Optional values
+#### This is a list of optional values you can add to your objects
+
+### Avatar
+
+#### If an avatar url is provided, an avatar will appear to the right of the option label.
+
+```
+const options = [
+ { label: 'First', value: 1, avatar: imageURL },
+];
+```
+
+### Id
+
+#### By default the key for the object will be its value, you can override this by including an id. The id can be either a string or number.
+
+```
+const options = [
+ { label: 'First', value: 1, id: string | number },
+];
+```
+
 ## Props
 
 #### `options: {Array}`
@@ -111,6 +134,12 @@ you are using an array of objects, ensure you have a `label` key. e.g
 **Default:** `false`
 
 **Description:** Specifies the if the select component can have multiple values selected at once.
+
+#### `avatars: boolean`
+
+**Default:** `false`
+
+**Description:** Specifies the if the select component options can have avatars.
 
 ## 🖌️ Add custom styles
 
