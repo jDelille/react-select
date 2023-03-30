@@ -124,7 +124,7 @@ example:
 // Overwrite the select container 
 ```
 
-Since there are a lot of classnames, instead of writing them all here, inspect the select component in your DevTools to see all the classes!
+Since there are a lot of classnames, instead of writing them all here, inspect the select component in your ```DevTools``` to see all the classes!
 
 
 
