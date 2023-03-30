@@ -139,7 +139,13 @@ you are using an array of objects, ensure you have a `label` key. e.g
 
 **Default:** `false`
 
-**Description:** Specifies the if the select component options can have avatars.
+**Description:** Specifies the if the select component options can have avatars. For multi select components where this is true, an avatar will also be added to the option-badge for selected options.
+
+#### `divider: boolean`
+
+**Default:** `false`
+
+**Description:** Specifies the if the select component has a divider line to the left of the down arrow.
 
 ## 🖌️ Add custom styles
 
