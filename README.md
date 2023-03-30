@@ -16,7 +16,7 @@ import { SelectOption } from '@/../jd-react-select/dist/components/Select'
 
 Now, you can use it:
 
-#### Single Select (when you just want to select one value at a time)
+### Single Select (when you just want to select one value at a time)
 
 #### 1. Create your array of objects 
 
@@ -54,7 +54,32 @@ If you want to have a default value be selected when you component initializes, 
 
 <hr />
 
-#### Multi Select (when you want to select multiple elements)
+### Multi Select (when you want to select multiple elements)
+
+#### 1. Create your array of objects 
+
+example:
+
+```
+const options = [
+ { label: 'First', value: 1 },
+ { label: 'Second', value: 2 },
+ { label: 'Third', value: 3 },
+ { label: 'Fourth', value: 4 },
+ { label: 'Fifth', value: 5 },
+];
+```
+
+#### 2. Ceate a useState to set the selected value
+
+example: 
+
+```
+const [value, setValue] = useState<SelectOption[]>([options[0]]);
+```
+If you want to have a default value be selected when you component initializes, you can set the default state to (options[0]) to have the initial value of the select component be the first value in the options array.
+
+###
 
 ```jsx
 <Select
@@ -64,6 +89,8 @@ If you want to have a default value be selected when you component initializes, 
  onChange={(value) => setValue(value)}
 />
 ```
+
+To let the component know you want to have multiple selected values, pass in the multiple parameter.
 
 ## Props
 
