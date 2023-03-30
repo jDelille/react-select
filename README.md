@@ -104,7 +104,7 @@ const options = [
 
 ### Id
 
-#### If you want to add an id to your objects. By default the key for the object will be its value, you can override this by including an id. The id can be either a string or number.
+#### By default the key for the object will be its value, you can override this by including an id. The id can be either a string or number.
 
 ```
 const options = [
