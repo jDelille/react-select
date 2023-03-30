@@ -9,12 +9,14 @@ export type SelectOption = {
 type MultipleSelectProps = {
     multiple: true;
     avatars?: boolean | undefined;
+    divider?: boolean | undefined;
     value: SelectOption[];
     onChange: (value: SelectOption[]) => void;
 };
 type SingleSelectProps = {
     multiple?: false;
     avatars?: boolean | undefined;
+    divider?: boolean | undefined;
     value?: SelectOption;
     onChange: (value: SelectOption | undefined) => void;
 };

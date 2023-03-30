@@ -8,7 +8,7 @@
 	align-items: center;
 	gap: 0.5em;
 	padding: 0.5em;
-	border-radius: 0.25em;
+	border-radius: 8px;
 }
 
 .container:focus {
@@ -44,10 +44,13 @@
 }
 
 .caret {
-	translate: 0 25%;
-	border: 0.25em solid transparent;
-	border-top-color: #777;
+	min-width: 14px;
+	max-width: 14px;
 	cursor: pointer;
+}
+
+.caret-path {
+	stroke: white;
 }
 
 .options {
@@ -57,7 +60,7 @@
 	display: none;
 	max-height: 15em;
 	overflow-y: auto;
-	border-radius: 0.25em;
+	border-radius: 8px;
 	width: 100%;
 	left: 0;
 	top: calc(100% + 0.25em);
@@ -126,9 +129,14 @@
 	color: #363c4a;
 }
 
-.avatar {
+.avatar,
+.badge-avatar {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
 	margin-right: 10px;
+}
+
+.badge-avatar {
+	margin-right: 5px;
 }
