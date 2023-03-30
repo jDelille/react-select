@@ -118,12 +118,13 @@ you are using an array of objects, ensure you have a `label` key. e.g
 
 You can fully customize the styles for the select component by targeting the class names in your stylesheet.
 
+example:
 ```
 .container
 // Overwrite the select container 
 ```
 
-To view all the class names, inspect the select component in your DevTools!
+Since there are a lot of classnames, instead of writing them all here, inspect the select component in your DevTools to see all the classes!
 
 
 
